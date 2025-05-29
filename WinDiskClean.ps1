@@ -46,5 +46,4 @@ Clear-EventLog -LogName Security -Force
 Invoke-Item "$env:SystemRoot\System32\cleanmgr.exe" /sagerun:1
 
 # Output the summary
-Write-Host "`nSummary of tasks performed:"
-$summary | ForEach-Object { Write-Host "- $_" }
+Write-Host "`nDisk has been cleaned"
