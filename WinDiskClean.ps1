@@ -46,4 +46,4 @@ Clear-EventLog -LogName Security -Force
 Invoke-Item "$env:SystemRoot\System32\cleanmgr.exe" /sagerun:1
 
 # Output the summary
-Write-Host "`nDisk has been cleaned"
+Write-Host "`nDisk and RAM has been cleaned. Please reboot.........................."
