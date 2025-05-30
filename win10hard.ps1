@@ -55,4 +55,4 @@ auditpol /set /category:"Account Logon" /success:enable /failure:enable
 auditpol /set /category:"Privilege Use" /success:enable /failure:enable
 
 # Inform the user
-Write-Host "Windows 10 Pro hardening script executed successfully."
+Write-Host "Windows 10 Pro hardening script executed successfully..........."
