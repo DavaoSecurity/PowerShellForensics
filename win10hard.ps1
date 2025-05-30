@@ -21,7 +21,7 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies
 Set-SmbServerConfiguration -EnableSMB1Protocol $false -Force
 
 # Enable BitLocker (assuming the system drive is C:)
-Enable-BitLocker -MountPoint "C:" -EncryptionMethod Aes256 -UsedSpaceOnly -Password (ConvertTo-SecureString "YourSecurePassword" -AsPlainText -Force)
+# Enable-BitLocker -MountPoint "C:" -EncryptionMethod Aes256 -UsedSpaceOnly -Password (ConvertTo-SecureString "YourSecurePassword" -AsPlainText -Force)
 
 # Configure Windows Update settings
 Set-Service -Name wuauserv -StartupType Automatic
@@ -32,11 +32,11 @@ Disable-LocalUser -Name "Guest"
 
 # Set password policy
 $PasswordPolicy = @{
-    "MaximumPasswordAge" = 30
+    "MaximumPasswordAge" = 90
     "MinimumPasswordAge" = 1
     "MinimumPasswordLength" = 12
     "PasswordComplexity" = 1
-    "LockoutBadCount" = 5
+    "LockoutBadCount" = 6
     "ResetLockoutCount" = 15
     "LockoutDuration" = 30
 }
