@@ -2,7 +2,7 @@
 # run as Administrator
 
 # Define the output file path
-$outputFile = "C:\BackdoorScanReport.txt"
+$outputFile = "C:/Users/Nathan/Desktop/bkdoor.txt"
 
 # Function to write header to the report
 function Write-Header {
