@@ -32,4 +32,4 @@ $logFiles | Where-Object {$_.LastWriteTime -lt $currentTime.AddDays(-$logRotatio
 
 # Log the results
 $logResult = "Log files older than 3 months have been deleted and logs have been rotated."
-$logResult | Out-File -FilePath "C:\Logs\log_rotation.log" -Append
+$logResult | Out-File -FilePath "C:\log_rotation.log" -Append
