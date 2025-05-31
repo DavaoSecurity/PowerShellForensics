@@ -6,11 +6,11 @@
 # Run PowerShell as an administrator. Execute the script: .\backdoor.ps1.
 
 # Define output file
-$outputFile = "C:\SecurityAssessments\BackdoorDetectionReport.txt"
+$outputFile = "C:/Users/Nathan/Desktop/backdoor.txt"
 
 # Create or clear the output file
 Clear-Content -Path $outputFile -ErrorAction SilentlyContinue
-Add-Content -Path $outputFile -Value "Backdoor Detection Report - $(Get-Date)" 
+Add-Content -Path $outputFile -Value "Backdoor Detection Report - $(Get-Date)"
 Add-Content -Path $outputFile -Value "====================================="
 
 # Function to check for unusual network connections
