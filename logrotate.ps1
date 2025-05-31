@@ -9,7 +9,7 @@
 # Run as Administrator
 
 # Set the log file path and the maximum age of the logs
-$logFilePath = "C:\Logs"
+$logFilePath = "C:\Windows\System32\winevt\Logs"
 $maxAge = 90 # days
 
 # Set the log rotation period
