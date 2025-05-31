@@ -20,7 +20,7 @@ $subnet = [System.Net.IPNetwork]::Parse("$localIP/$subnetMask")
     try {
         $ping = Test-Connection -ComputerName $ip -Count 1 -ErrorAction Stop
         $hostEntry = [System.Net.Dns]::GetHostEntry($ip) # -ErrorAction SilentlyContinue
-        $macAddress = (Get-ArpTable | Where-Object { $_.IPAddress -eq $ip }).PhysicalAddress -ErrorAction SilentlyContinue
+        $macAddress = (Get-ArpTable | Where-Object { $_.IPAddress -eq $ip }).PhysicalAddress # -ErrorAction SilentlyContinue
 
         # Format the output
         $hostName = if ($hostEntry) { $hostEntry.HostName } else { "N/A" }
