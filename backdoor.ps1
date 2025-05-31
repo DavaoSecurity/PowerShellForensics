@@ -15,7 +15,7 @@ Add-Content -Path $outputFile -Value "====================================="
 
 # Function to check for unusual network connections
 function Check-NetworkConnections {
-    Add-Content -Path $outputFile -Value "`nUnusual Network Connections:"
+    Add-Content -Path $outputFile -Value "`nInvestigate These Network Connections:"
     $connections = Get-NetTCPConnection | Where-Object { $_.State -eq 'Established' }
     foreach ($connection in $connections) {
         $process = Get-Process -Id $connection.OwningProcess -ErrorAction SilentlyContinue
@@ -27,7 +27,7 @@ function Check-NetworkConnections {
 
 # Function to check for suspicious processes
 function Check-SuspiciousProcesses {
-    Add-Content -Path $outputFile -Value "`nSuspicious Processes:"
+    Add-Content -Path $outputFile -Value "`nAre These Suspicious Processes?:"
     $suspiciousProcesses = @("powershell.exe", "cmd.exe", "wscript.exe", "cscript.exe", "java.exe", "python.exe")
     foreach ($proc in $suspiciousProcesses) {
         $runningProcesses = Get-Process -Name $proc -ErrorAction SilentlyContinue
