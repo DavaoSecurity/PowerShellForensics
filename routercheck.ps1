@@ -4,7 +4,7 @@
 # run as Administrator
 
 # Define the output file
-$outputFile = "C:\Path\To\Your\Output\RouterFirewallScan.txt"
+$outputFile = "C:\RouterFirewallScan.txt"
 
 # Function to check router configuration
 function Check-RouterConfiguration {
