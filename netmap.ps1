@@ -18,5 +18,4 @@ $Computers
 $Computers | Export-Csv $FileOut -NotypeInformation
 #$Computers | Out-Gridview
 
-
-arp -a -v
+arp -a -v > netmap.txt
