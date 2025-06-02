@@ -5,7 +5,7 @@
 # Removes user temporary files from the AppData\Local\Temp and Temporary Internet Files directories
 # Runs the disk cleanup tool to remove unnecessary files
 # Runs disk defragmentation on the C drive
-# Requires administrative privileges to run and run it in PowerShell by typing .\cleanup.ps1. 
+# Requires administrative privileges to run and run it in PowerShell by typing .\cleanup.ps1.
 
 # Define the script
 $cleanupScript = {
