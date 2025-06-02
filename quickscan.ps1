@@ -1,7 +1,7 @@
 # run as Administrator
 
 # Define the output file path
-$outputFile = "SystemInfoReport.txt"
+$outputFile = "C:\SystemInfoReport.txt"
 
 # Function to get logged on users
 function Get-LoggedOnUsers {

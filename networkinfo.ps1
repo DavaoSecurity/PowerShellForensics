@@ -1,11 +1,11 @@
 # This script uses the Get-NetAdapter, Get-NetIPConfiguration, and Get-NetTCPConnection cmdlets to retrieve information about the network
 # adapters, gateway, and connected devices. The output is then written to a text file in the local Downloads folder.
 # Run with administrative privileges, otherwise some information may not be available due to permissions or other restrictions.
-# .\networkinfo.ps1 
+# .\networkinfo.ps1
 # The output will be written to a file named NetworkInfo.txt in the local Downloads folder.
 
 # Define the path to the output file
-$outputPath = "$env:USERPROFILE\Downloads\NetworkInfo.txt"
+$outputPath = "$env:USERPROFILE\Downloads\NetworkInfo2.txt"
 
 # Get network adapter configuration
 $networkAdapters = Get-NetAdapter | Where-Object { $_.Status -eq "Up" }

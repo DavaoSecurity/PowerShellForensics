@@ -2,11 +2,11 @@
 # Script to detect Users and Devices on local network
 
 # Define output file
-$outputFile = "C:\NetworkScanReport.txt"
+$outputFile = "C:\NetworkScanReport1.txt"
 
 # Create or clear the output file
 Clear-Content -Path $outputFile -ErrorAction SilentlyContinue
-Add-Content -Path $outputFile -Value "Local Network Scan Report - $(Get-Date)" 
+Add-Content -Path $outputFile -Value "Local Network Scan Report - $(Get-Date)"
 Add-Content -Path $outputFile -Value "====================================="
 
 # Function to get connected devices

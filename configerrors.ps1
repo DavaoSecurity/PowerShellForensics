@@ -1,4 +1,4 @@
-# Gather win 10 and 11 configutaion errors
+# Gather win 10 and 11 configuration errors
 # Run as Administrator
 
 # Define the output file path

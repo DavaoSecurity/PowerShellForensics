@@ -9,7 +9,7 @@ $outputFile = "C:\RouterFirewallScan.txt"
 # Function to check router configuration
 function Check-RouterConfiguration {
     # Example: Check if the router is reachable
-    $routerIP = "192.168.2.1"  # Replace with your router's IP address
+    $routerIP = "192.168.0.1"  # Replace with your router's IP address
     $pingResult = Test-Connection -ComputerName $routerIP -Count 2 -ErrorAction SilentlyContinue
 
     if ($pingResult) {

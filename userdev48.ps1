@@ -2,7 +2,7 @@
 # run as Administrator
 
 # Define output file
-$outputFile = "NetworkDevicesAndUsers.txt"
+$outputFile = "C:\NetworkDevicesAndUsers.txt"
 
 # Function to get connected devices on the local network
 function Get-ConnectedDevices {
@@ -22,7 +22,7 @@ function Get-UserActivity {
     $timeLimit = (Get-Date).AddHours(-48)
 
     # Get all event logs related to user logon
-    $events = Get-WinEvent -FilterHashtable @{LogName='Security'; Id=4624; StartTime=$timeLimit} | 
+    $events = Get-WinEvent -FilterHashtable @{LogName='Security'; Id=4624; StartTime=$timeLimit} |
               Select-Object TimeCreated, @{Name='User'; Expression={$_.Properties[5].Value}}, @{Name='EventType'; Expression={$_.Id}}
 
     foreach ($event in $events) {

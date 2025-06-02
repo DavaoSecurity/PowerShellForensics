@@ -1,5 +1,5 @@
 # Define the output file path
-$outputFile = "C:\SuspiciousEventIDActivityReport.txt"
+$outputFile = "C:\Logs\SuspiciousEventIDActivityReport.txt"
 
 # Create or clear the output file
 Clear-Content -Path $outputFile -ErrorAction SilentlyContinue

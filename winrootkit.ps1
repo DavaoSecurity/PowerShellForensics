@@ -1,11 +1,11 @@
 # Define the output file path
-$outputFile = "RootkitScanReport.txt"
+$outputFile = "C:\RootkitScanReport.txt"
 
 # Function to get suspicious processes
 function Get-SuspiciousProcesses {
     $suspiciousProcesses = @()
     $processes = Get-Process | Where-Object { $_.Name -notin @("System", "Idle", "explorer", "powershell", "services") }
-    
+
     foreach ($process in $processes) {
         $hash = Get-FileHash -Path $process.Path -Algorithm SHA256 -ErrorAction SilentlyContinue
         if ($hash) {
@@ -24,7 +24,7 @@ function Get-SuspiciousProcesses {
 function Get-SuspiciousServices {
     $suspiciousServices = @()
     $services = Get-Service | Where-Object { $_.Status -eq 'Running' -and $_.Name -notlike 'wuauserv' }
-    
+
     foreach ($service in $services) {
         $suspiciousServices += [PSCustomObject]@{
             Name = $service.Name
