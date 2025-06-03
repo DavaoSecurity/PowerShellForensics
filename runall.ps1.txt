@@ -1,4 +1,0 @@
-Get-ExecutionPolicy
-Set-ExecutionPolicy Unrestricted
-cd "C:\Users\Jo\Desktop\JM25"
-Get-ChildItem -Filter *.ps1 | ForEach-Object { & $_.FullName }
